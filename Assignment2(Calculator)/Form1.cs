@@ -314,7 +314,7 @@ namespace Assignment2_Calculator_
 
         private void buttone_Click(object sender, EventArgs e)
         {
-            textBox1.Text = Math.e.ToString();
+            textBox1.Text = Math.E.ToString();
         }
     }
 }

@@ -36,13 +36,10 @@ namespace Assignment2_Calculator_
             this.buttonCE = new System.Windows.Forms.Button();
             this.buttone = new System.Windows.Forms.Button();
             this.buttonpi = new System.Windows.Forms.Button();
-            this.button2sq = new System.Windows.Forms.Button();
             this.buttonx2 = new System.Windows.Forms.Button();
             this.button1ox = new System.Windows.Forms.Button();
             this.buttonxs = new System.Windows.Forms.Button();
-            this.buttonexp = new System.Windows.Forms.Button();
             this.button2sx = new System.Windows.Forms.Button();
-            this.buttonn1 = new System.Windows.Forms.Button();
             this.buttonxy = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -70,7 +67,7 @@ namespace Assignment2_Calculator_
             // buttonCLR
             // 
             this.buttonCLR.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonCLR.Location = new System.Drawing.Point(603, 253);
+            this.buttonCLR.Location = new System.Drawing.Point(603, 310);
             this.buttonCLR.Name = "buttonCLR";
             this.buttonCLR.Size = new System.Drawing.Size(75, 39);
             this.buttonCLR.TabIndex = 0;
@@ -87,6 +84,7 @@ namespace Assignment2_Calculator_
             this.buttondvd.TabIndex = 2;
             this.buttondvd.Text = " ÷";
             this.buttondvd.UseVisualStyleBackColor = false;
+            this.buttondvd.Click += new System.EventHandler(this.buttondvd_Click);
             // 
             // buttonmulti
             // 
@@ -97,6 +95,7 @@ namespace Assignment2_Calculator_
             this.buttonmulti.TabIndex = 3;
             this.buttonmulti.Text = "×";
             this.buttonmulti.UseVisualStyleBackColor = false;
+            this.buttonmulti.Click += new System.EventHandler(this.buttonmulti_Click);
             // 
             // buttonmin
             // 
@@ -112,53 +111,46 @@ namespace Assignment2_Calculator_
             // buttonCE
             // 
             this.buttonCE.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonCE.Location = new System.Drawing.Point(460, 253);
+            this.buttonCE.Location = new System.Drawing.Point(460, 310);
             this.buttonCE.Name = "buttonCE";
             this.buttonCE.Size = new System.Drawing.Size(75, 39);
             this.buttonCE.TabIndex = 5;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = false;
+            this.buttonCE.Click += new System.EventHandler(this.buttonCE_Click);
             // 
             // buttone
             // 
             this.buttone.BackColor = System.Drawing.Color.LightBlue;
-            this.buttone.Location = new System.Drawing.Point(603, 312);
+            this.buttone.Location = new System.Drawing.Point(56, 605);
             this.buttone.Name = "buttone";
             this.buttone.Size = new System.Drawing.Size(75, 39);
             this.buttone.TabIndex = 6;
             this.buttone.Text = "e";
             this.buttone.UseVisualStyleBackColor = false;
+            this.buttone.Click += new System.EventHandler(this.buttone_Click);
             // 
             // buttonpi
             // 
             this.buttonpi.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonpi.Location = new System.Drawing.Point(170, 309);
+            this.buttonpi.Location = new System.Drawing.Point(56, 544);
             this.buttonpi.Name = "buttonpi";
             this.buttonpi.Size = new System.Drawing.Size(75, 39);
             this.buttonpi.TabIndex = 7;
             this.buttonpi.Text = "π";
             this.buttonpi.UseVisualStyleBackColor = false;
-            // 
-            // button2sq
-            // 
-            this.button2sq.BackColor = System.Drawing.Color.LightBlue;
-            this.button2sq.Location = new System.Drawing.Point(308, 312);
-            this.button2sq.Name = "button2sq";
-            this.button2sq.Size = new System.Drawing.Size(75, 39);
-            this.button2sq.TabIndex = 8;
-            this.button2sq.Text = " 2²";
-            this.button2sq.UseVisualStyleBackColor = false;
-            this.button2sq.Click += new System.EventHandler(this.button9_Click);
+            this.buttonpi.Click += new System.EventHandler(this.buttonpi_Click);
             // 
             // buttonx2
             // 
             this.buttonx2.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonx2.Location = new System.Drawing.Point(41, 312);
+            this.buttonx2.Location = new System.Drawing.Point(308, 313);
             this.buttonx2.Name = "buttonx2";
             this.buttonx2.Size = new System.Drawing.Size(75, 36);
             this.buttonx2.TabIndex = 9;
             this.buttonx2.Text = " x²";
             this.buttonx2.UseVisualStyleBackColor = false;
+            this.buttonx2.Click += new System.EventHandler(this.buttonx2_Click);
             // 
             // button1ox
             // 
@@ -169,6 +161,7 @@ namespace Assignment2_Calculator_
             this.button1ox.TabIndex = 10;
             this.button1ox.Text = "1/x";
             this.button1ox.UseVisualStyleBackColor = false;
+            this.button1ox.Click += new System.EventHandler(this.button1ox_Click);
             // 
             // buttonxs
             // 
@@ -180,45 +173,27 @@ namespace Assignment2_Calculator_
             this.buttonxs.Text = "|x|";
             this.buttonxs.UseVisualStyleBackColor = false;
             // 
-            // buttonexp
-            // 
-            this.buttonexp.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonexp.Location = new System.Drawing.Point(460, 312);
-            this.buttonexp.Name = "buttonexp";
-            this.buttonexp.Size = new System.Drawing.Size(75, 39);
-            this.buttonexp.TabIndex = 12;
-            this.buttonexp.Text = "exp";
-            this.buttonexp.UseVisualStyleBackColor = false;
-            // 
             // button2sx
             // 
             this.button2sx.BackColor = System.Drawing.Color.LightBlue;
-            this.button2sx.Location = new System.Drawing.Point(41, 370);
+            this.button2sx.Location = new System.Drawing.Point(56, 316);
             this.button2sx.Name = "button2sx";
             this.button2sx.Size = new System.Drawing.Size(75, 35);
             this.button2sx.TabIndex = 13;
             this.button2sx.Text = " 2√x";
             this.button2sx.UseVisualStyleBackColor = false;
-            // 
-            // buttonn1
-            // 
-            this.buttonn1.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonn1.Location = new System.Drawing.Point(460, 369);
-            this.buttonn1.Name = "buttonn1";
-            this.buttonn1.Size = new System.Drawing.Size(75, 36);
-            this.buttonn1.TabIndex = 16;
-            this.buttonn1.Text = "n!";
-            this.buttonn1.UseVisualStyleBackColor = false;
+            this.button2sx.Click += new System.EventHandler(this.button2sx_Click);
             // 
             // buttonxy
             // 
             this.buttonxy.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonxy.Location = new System.Drawing.Point(41, 426);
+            this.buttonxy.Location = new System.Drawing.Point(56, 372);
             this.buttonxy.Name = "buttonxy";
             this.buttonxy.Size = new System.Drawing.Size(75, 35);
             this.buttonxy.TabIndex = 17;
             this.buttonxy.Text = "x ^ y";
             this.buttonxy.UseVisualStyleBackColor = false;
+            this.buttonxy.Click += new System.EventHandler(this.buttonxy_Click);
             // 
             // button7
             // 
@@ -253,7 +228,7 @@ namespace Assignment2_Calculator_
             // button10x
             // 
             this.button10x.BackColor = System.Drawing.Color.LightBlue;
-            this.button10x.Location = new System.Drawing.Point(41, 485);
+            this.button10x.Location = new System.Drawing.Point(56, 427);
             this.button10x.Name = "button10x";
             this.button10x.Size = new System.Drawing.Size(75, 34);
             this.button10x.TabIndex = 21;
@@ -294,7 +269,7 @@ namespace Assignment2_Calculator_
             // buttonlog
             // 
             this.buttonlog.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonlog.Location = new System.Drawing.Point(41, 547);
+            this.buttonlog.Location = new System.Drawing.Point(56, 485);
             this.buttonlog.Name = "buttonlog";
             this.buttonlog.Size = new System.Drawing.Size(75, 36);
             this.buttonlog.TabIndex = 25;
@@ -304,7 +279,7 @@ namespace Assignment2_Calculator_
             // buttonln
             // 
             this.buttonln.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonln.Location = new System.Drawing.Point(41, 605);
+            this.buttonln.Location = new System.Drawing.Point(460, 369);
             this.buttonln.Name = "buttonln";
             this.buttonln.Size = new System.Drawing.Size(75, 35);
             this.buttonln.TabIndex = 26;
@@ -325,12 +300,13 @@ namespace Assignment2_Calculator_
             // buttonpam
             // 
             this.buttonpam.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonpam.Location = new System.Drawing.Point(170, 605);
+            this.buttonpam.Location = new System.Drawing.Point(170, 314);
             this.buttonpam.Name = "buttonpam";
             this.buttonpam.Size = new System.Drawing.Size(75, 35);
             this.buttonpam.TabIndex = 28;
             this.buttonpam.Text = "+/-";
             this.buttonpam.UseVisualStyleBackColor = false;
+            this.buttonpam.Click += new System.EventHandler(this.buttonpam_Click);
             // 
             // button2
             // 
@@ -370,6 +346,7 @@ namespace Assignment2_Calculator_
             this.buttondot.TabIndex = 32;
             this.buttondot.Text = ".";
             this.buttondot.UseVisualStyleBackColor = true;
+            this.buttondot.Click += new System.EventHandler(this.buttondot_Click);
             // 
             // buttonplus
             // 
@@ -464,13 +441,10 @@ namespace Assignment2_Calculator_
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.buttonxy);
-            this.Controls.Add(this.buttonn1);
             this.Controls.Add(this.button2sx);
-            this.Controls.Add(this.buttonexp);
             this.Controls.Add(this.buttonxs);
             this.Controls.Add(this.button1ox);
             this.Controls.Add(this.buttonx2);
-            this.Controls.Add(this.button2sq);
             this.Controls.Add(this.buttonpi);
             this.Controls.Add(this.buttone);
             this.Controls.Add(this.buttonCE);
@@ -495,13 +469,10 @@ namespace Assignment2_Calculator_
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.Button buttone;
         private System.Windows.Forms.Button buttonpi;
-        private System.Windows.Forms.Button button2sq;
         private System.Windows.Forms.Button buttonx2;
         private System.Windows.Forms.Button button1ox;
         private System.Windows.Forms.Button buttonxs;
-        private System.Windows.Forms.Button buttonexp;
         private System.Windows.Forms.Button button2sx;
-        private System.Windows.Forms.Button buttonn1;
         private System.Windows.Forms.Button buttonxy;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;

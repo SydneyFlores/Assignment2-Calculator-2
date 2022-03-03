@@ -107,6 +107,7 @@ namespace Assignment2_Calculator_
             this.buttonmin.TabIndex = 4;
             this.buttonmin.Text = "-";
             this.buttonmin.UseVisualStyleBackColor = false;
+            this.buttonmin.Click += new System.EventHandler(this.buttonmin_Click);
             // 
             // buttonCE
             // 

@@ -52,6 +52,11 @@ namespace Assignment2_Calculator_
                     answer = firstnumber + secondnumber;
                     textBox1.Text = answer.ToString();
                     break;
+                case "-":
+                    secondnumber = Convert.ToDouble(textBox1.Text);
+                    answer = firstnumber - secondnumber;
+                    textBox1.Text = answer.ToString();
+                    break;
                 default:
                     break;
             }
@@ -137,6 +142,13 @@ namespace Assignment2_Calculator_
         private void buttonplus_Click(object sender, EventArgs e)
         {
             operation = "+";
+            firstnumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = " ";
+        }
+
+        private void buttonmin_Click(object sender, EventArgs e)
+        {
+            operation = "-";
             firstnumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = " ";
         }
